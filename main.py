@@ -11,7 +11,10 @@ SC_KEY = os.environ.get("SC_KEY")
 
 def send_wechat(subject, sender):
     url = f"https://sctapi.ftqq.com/{SC_KEY}.send"
-    data = f"邮件: {subject}, 发件人: {sender}"
+    data = {
+        "title": f"新邮件: {subject}",
+        "desp": f"发件人: {sender}" 
+    }
     print(f"send data: {data}")
     requests.post(url, data=data)
 
