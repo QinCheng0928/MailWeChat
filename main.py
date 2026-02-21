@@ -13,9 +13,8 @@ def send_wechat(subject, sender):
     url = f"https://sctapi.ftqq.com/{SC_KEY}.send"
     data = {
         "title": f"新邮件: {subject}",
-        "desp": f"发件人: {sender}" 
+        "desp": f"发件人: {sender}"
     }
-    print(f"send data: {data}")
     requests.post(url, data=data)
 
 def check_mail():
@@ -26,7 +25,6 @@ def check_mail():
 
         _, response = mail.search(None, 'UNSEEN')
         mail_ids = response[0].split()
-        print(f"mail_ids: {mail_ids}")
 
         if mail_ids:
             for m_id in mail_ids:
