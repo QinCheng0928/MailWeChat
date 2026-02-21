@@ -1,0 +1,29 @@
+name: Email Checker
+
+on:
+  schedule:
+    - cron: '0 2,4,6,8,10,12,14 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        env:
+          IMAP_SERVER: ${{ secrets.IMAP_SERVER }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          SC_KEY: ${{ secrets.SC_KEY }}
+        run: python main.py
