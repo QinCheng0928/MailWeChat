@@ -7,6 +7,7 @@
 </h4>
 
 
+
 This is a lightweight Python-based script designed for **periodically monitoring unread emails** in your inbox. Upon detecting a new email, it extracts the subject and sender details and pushes a notification to your WeChat via **ServerChan**.
 
 
