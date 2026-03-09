@@ -1,9 +1,5 @@
 # 邮件微信通知助手
-<h4 align="center">
-    <p>
-        <a href="https://github.com/QinCheng0928/MailWeChat/blob/main/README.md">English</a> | <b>简体中文</b>
-    </p>
-</h4>
+
 
 这是一个基于 Python 的轻量级脚本，用于**定时监控电子邮箱中的未读邮件**。当检测到新邮件时，它会提取邮件主题和发件人，并通过**Server酱**推送到你的微信公众号。
 
