@@ -19,13 +19,13 @@
 
 #### 🛠️ 第一步：准备工作 (邮箱与推送服务)
 
-1. **开启邮箱IMAP服务：**登录您的网页版邮箱，在设置中找到 **IMAP/SMTP 服务**并开启。系统会给你一个 16 位的随机字符串，这是代码中的 `EMAIL_PASS`。
-2. **获取Server酱Key：**访问 [Server酱官网](https://sct.ftqq.com/)，使用微信扫码登录，在**Key&API**版面复制**SendKey**，通常以SCT开头。
+1. **开启邮箱IMAP服务**：登录您的网页版邮箱，在设置中找到 **IMAP/SMTP 服务**并开启。系统会给你一个 16 位的随机字符串，这是代码中的 `EMAIL_PASS`。
+2. **获取Server酱Key**：访问 [Server酱官网](https://sct.ftqq.com/)，使用微信扫码登录，在**Key&API**版面复制**SendKey**，通常以SCT开头。
 
 #### 🛠️ 第二步：配置 GitHub 仓库
 
-1. **Fork仓库：**确保您的 GitHub 仓库中包含 `main.py` 和 `.github/workflows/main.yml`。
-2. **设置 Secrets：**
+1. **Fork仓库**：确保您的 GitHub 仓库中包含 `main.py` 和 `.github/workflows/main.yml`。
+2. **设置 Secrets**：
    - 进入仓库的 **Settings** -> **Secrets and variables** -> **Actions**。
    - 点击 **New repository secret**，依次添加以下四个值：
      - `IMAP_SERVER`：例如`imap.qq.com`，`imap.163.com`，`imap.gmail.com`
